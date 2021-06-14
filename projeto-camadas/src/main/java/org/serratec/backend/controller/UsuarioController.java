@@ -34,7 +34,7 @@ public class UsuarioController {
 	@PostMapping
 	public ResponseEntity<Usuario> inserir(@RequestBody Usuario usuario) {
 		try {
-			usuario = usuarioService.inserir(usuario);
+		//	usuario = usuarioService.inserir(usuario);
 			URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 					.buildAndExpand(usuario.getId()).toUri();
 			return ResponseEntity.created(uri).body(usuario);	
